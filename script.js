@@ -1,9 +1,7 @@
 var selectMenu = document.getElementById("selectMenu");
 	
 function hamburgClick(){
-	console.log(selectMenu.style.display);
 	if (selectMenu.classList.contains("hidden")) {
-		console.log(selectMenu);
 		selectMenu.classList.remove("hidden");
 	} else {
 		selectMenu.classList.add("hidden");
@@ -13,9 +11,7 @@ function hamburgClick(){
 var hasenWahl = document.getElementById("hasenWahl");
 	
 function hasenMenuClick(){
-	console.log(hasenWahl.style.display);
 	if (hasenWahl.classList.contains("hidden")) {
-		console.log(hasenWahl);
 		hasenWahl.classList.remove("hidden");
 	} else {
 		hasenWahl.classList.add("hidden");
@@ -87,8 +83,7 @@ var HasenListe = [
     },
     
 ];
-document.getElementById("nameHase").innerHTML = HasenListe[0].name;    
-
+document.getElementById("nameHase").innerHTML = HasenListe[0].name;
 
 var fertigWurf = document.getElementById("neuerWurfKnopf");
 if (fertigWurf) {
