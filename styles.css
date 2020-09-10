@@ -82,6 +82,7 @@ header .menu #selectMenu .menuPunkt {
   background: #0B610B;
   position: relative;
 }
+/* reusable class for things which are initially hidden */
 .hidden {
   display: none;
 }
