@@ -1,0 +1,220 @@
+body {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  color: #BDBDBD;
+  background-color: #071907;
+  margin: 0;
+}
+header {
+  height: 200px;
+  background-color: #0B3B0B;
+  z-index: -5;
+}
+header .headerP {
+  width: 372px;
+  height: 200px;
+  position: absolute;
+  border-radius: 0px 0px 372px 0px;
+}
+header .colorRing {
+  position: absolute;
+  border-top: none;
+  border-left: none;
+  border-right: solid 30px #F7E516;
+  border-bottom: solid 3px #F7E516;
+  height: 199px;
+  width: 345px;
+  border-radius: 0px 0px 372px 0px;
+}
+header a {
+  text-decoration: none;
+  color: #BDBDBD;
+}
+header a .logo {
+  width: 200px;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+header .menu {
+  z-index: 2;
+}
+header .menu #hamburg {
+  top: 205px;
+  display: block;
+  background: #0B610B;
+  width: 75px;
+  height: 50px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  transition: border-radius 0.5s;
+}
+header .menu .line {
+  position: absolute;
+  left: 10px;
+  height: 4px;
+  width: 55px;
+  background: #000;
+  border-radius: 2px;
+  display: block;
+  transition: 0.5s;
+  transform-origin: center;
+}
+header .menu .line:nth-child(1) {
+  top: 12px;
+}
+header .menu .line:nth-child(2) {
+  top: 24px;
+}
+header .menu .line:nth-child(3) {
+  top: 36px;
+}
+header .menu #selectMenu {
+  z-index: 5;
+  top: 220px;
+}
+header .menu #selectMenu .menuPunkt {
+  z-index: 5;
+  top: 220px;
+  padding: 20px 20px 20px 20px;
+  background: #0B610B;
+  position: relative;
+}
+.hidden {
+  display: none;
+}
+main {
+  padding-left: 20px;
+  margin-top: 70px;
+}
+main h1 {
+  padding-left: 10px;
+}
+main .info {
+  float: left;
+  width: 420px;
+  height: 320px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+main .info .bubble1,
+main .info .bubble3 {
+  width: 300px;
+  height: 300px;
+  border-top: solid 10px #0174DF;
+  border-right: solid 10px #0174DF;
+  border-bottom: solid 1px #0174DF;
+  border-left: solid 1px #0174DF;
+  border-radius: 300px;
+  position: absolute;
+  background-color: rgba(11, 59, 11, 0.8);
+}
+main .info .bubble1 .TextB1,
+main .info .bubble3 .TextB1 {
+  padding: 70px 40px 50px 40px;
+  color: #BDBDBD;
+  text-align: center;
+}
+main .info .bubble2 {
+  margin-top: 100px;
+  margin-left: 280px;
+}
+main .info .bubble2,
+main .info .bubble4,
+main .info .bubble5 {
+  width: 120px;
+  height: 120px;
+  border-top: solid 1px rgba(247, 229, 22, 0.8);
+  border-right: solid 8px rgba(247, 229, 22, 0.8);
+  border-bottom: solid 8px rgba(247, 229, 22, 0.8);
+  border-left: solid 1px rgba(247, 229, 22, 0.8);
+  border-radius: 120px;
+  position: absolute;
+  background-color: rgba(11, 59, 11, 0.8);
+}
+main .info .bubble3 {
+  margin-left: 100px;
+}
+main .info .bubble4 {
+  margin-left: 5px;
+  margin-top: 20px;
+}
+main .info .bubble5 {
+  margin-top: 150px;
+  margin-left: 280px;
+}
+main .info .pictureBubble {
+  padding: 5px;
+  width: 110px;
+  height: 110px;
+}
+main form {
+  width: 90%;
+  margin: 10px;
+}
+main form .eingabe {
+  float: left;
+  margin-right: 45px;
+  width: 220px;
+}
+main form .eingabe label {
+  display: block;
+}
+main form .eingabe input,
+main form .eingabe textarea {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 10px;
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+}
+main form .eingabe input:focus,
+main form .eingabe textarea:focus {
+  background-color: #b9f2b9;
+  border-radius: 10px;
+  border: solid 3px #0B610B;
+}
+main form .eingabe #front,
+main form .eingabe #rucken,
+main form .eingabe #links,
+main form .eingabe #rechts {
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 10px;
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+}
+main form .eingabe #front:focus,
+main form .eingabe #rucken:focus,
+main form .eingabe #links:focus,
+main form .eingabe #rechts:focus {
+  background-color: #b9f2b9;
+  border-radius: 10px;
+  border: solid 3px #0B610B;
+}
+main form .eingabe #geschlecht,
+main form .eingabe #kastriert {
+  font-family: 'Roboto', sans-serif;
+  color: #1C1C1C;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+main form .eingabe #geschlecht:focus,
+main form .eingabe #kastriert:focus {
+  background-color: #b9f2b9;
+  border-radius: 10px;
+  border: solid 3px #0B610B;
+}
+main .hasenMenu .hasenMenuBild {
+  width: 80px;
+  height: 80px;
+}
+main .hasenMenu .hidden {
+  display: none;
+}
+
+/*# sourceMappingURL=styles.css.map */

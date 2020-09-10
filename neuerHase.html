@@ -1,0 +1,87 @@
+<!Doctype.html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<header>
+<img src="header.jpg" class="headerP">
+<div class="colorRing"></div>
+<a href="Index.html"><img src="Logo_weiß.png" class="logo"></a>
+<div class="menu">
+		<div id="hamburg" onclick="hamburgClick()">
+    		<span class="line"></span>
+    		<span class="line"></span>
+        	<span class="line"></span>
+    	</div>
+    	<div id="selectMenu" class="hidden">
+    		<div class="menuPunkt"><a href="Index.html"><b>Home</b></a></div>
+    		<div class="menuPunkt"><a href="hasen.html"><b>Hasen</b></a></div>
+    		<div class="menuPunkt"><a href="neuerHase.html"><b>neuer Hase</b></a></div>
+    		<div class="menuPunkt"><a href="neuerWurf.html"><b>neuer Wurf</b></a></div>
+    	</div>
+</div>
+</header>
+<main>
+	<h1>neuer Hase</h1>
+	<form>
+		<p class="eingabe">
+			<label for="name">Name</label>
+			<input type="text" id="name" placeholder="Name">
+		</p>
+		<p class="eingabe">
+			<label for="geboren">Geboren</label>
+			<input type="month" id="geboren">
+		</p>
+		<p class="eingabe">
+			<label for="geschlecht">Geschlecht</label>
+			<select id="geschlecht">
+				<option value="weiblich">weiblich</option>
+				<option value="mannlich">männlich</option>
+			</select>
+			<select id="kastriert">
+				<option value="kastriert">kastriert</option>
+				<option value="unkastriert">unkastriert</option>
+			</select>
+		</p>
+		<p class="eingabe">
+			<label for="rasse">Rasse</label>
+			<textarea id="rasse" placeholder="Rasse" cols="20" rows="2"></textarea>
+		</p>
+	
+		<p class="eingabe">
+			<label for="farbe">Farbe<label>
+			<input type="Text" id="farbe" placeholder="Farbe">
+		</p>
+		<p class="eingabe">
+			<label for="besitz">Im Besitz seit:<label>
+			<input type="month" id="besitz">
+		</p>
+		<p class="eingabe">
+			<label for="mutter">Mutter</label>
+			<input type="Text" id="mutter" placeholder="Mutter"><br>
+			<input type="Text" id="mRasse" placeholder="Rasse">
+		</p>
+		<p class="eingabe">
+			<label for="vater">Vater</label>
+			<input type="Text" id="vater" placeholder="Vater"><br>
+			<input type="Text" id="vRasse" placeholder="Rasse">
+		</p>
+		<p class="eingabe">
+			<label for="front">Front</label>
+			<input type="file" id="front">
+			<label for="rucken">Rücken</label>
+			<input type="file" id="rucken">
+			<label for="links">Links</label>
+			<input type="file" id="links">
+			<label for="rechts">Rechts</label>
+			<input type="file" id="rechts">
+		</p>
+		<p class="eingabe">
+			<butto id="neuerHaseKnopf">knopf</button>
+		</p>
+</form>
+</main>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

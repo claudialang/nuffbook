@@ -1,0 +1,207 @@
+@backgroundColor: #071907;
+@headerColor: #0B3B0B;
+@bubble1: #0174DF;
+@bubble2: #F7E516;
+@TextColor: #BDBDBD;
+
+body {
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+	color: @TextColor;
+	background-color: @backgroundColor;
+	margin:0;
+	
+	}
+header {
+	height: 200px;
+	background-color: @headerColor;
+	z-index: -5;
+	.headerP {
+		width: 372px;
+		height: 200px;
+		position: absolute;
+		border-radius: 0px 0px 372px 0px;
+		}
+	.colorRing {
+		position: absolute;
+		border-top: none;
+		border-left: none;
+		border-right: solid 30px @bubble2;
+		border-bottom: solid 3px @bubble2;
+		height: 199px;
+		width: 345px;
+		border-radius: 0px 0px 372px 0px;
+		}
+	a {
+		text-decoration: none;
+		color: @TextColor;
+		.logo {
+			width: 200px;
+			position: absolute;
+			right: 30px;
+			top: 20px;
+			}
+		}
+
+	.menu {
+		z-index: 2;
+		#hamburg { 
+			top: 205px;
+			display: block;
+			background: #0B610B; width: 75px; height: 50px; 
+			position: relative; 
+			margin-left: auto; margin-right: auto;
+			border-radius: 4px; 
+			transition: border-radius .5s;
+			}
+		.line { 
+			position: absolute; 
+			left:10px;
+			height: 4px; width: 55px; 
+			background: #000; border-radius: 2px;
+			display: block; 
+			transition: 0.5s; 
+			transform-origin: center; 
+			}
+		.line:nth-child(1) { top: 12px; 
+		}
+		.line:nth-child(2) { top: 24px; 
+		}
+		.line:nth-child(3) { top: 36px; 
+		}
+		#selectMenu{
+			z-index: 5;
+			top: 220px;
+			.menuPunkt {
+				z-index: 5;
+				top: 220px;
+				padding: 20px 20px 20px 20px;
+				background: #0B610B;
+				position: relative;
+			}
+		}	
+
+	}
+}
+.hidden{
+	display: none;
+}
+main {
+	padding-left: 20px;
+	margin-top: 70px;
+	h1{
+		padding-left: 10px;
+	}
+	.info{
+		float: left;
+		width: 420px;
+		height: 320px;
+		margin-left: 20px;
+		margin-top: 20px;
+		.bubble1, .bubble3{
+			width: 300px;
+			height: 300px;
+			border-top: solid 10px @bubble1;
+			border-right: solid 10px @bubble1;
+			border-bottom: solid 1px @bubble1;
+			border-left: solid 1px @bubble1;
+			border-radius: 300px;
+			position: absolute;
+			background-color: fade(@headerColor, 80%);
+			.TextB1{
+				padding: 70px 40px 50px 40px;
+				color: @TextColor;
+				text-align: center;
+			}
+		}
+		.bubble2{
+			margin-top: 100px;
+			margin-left: 280px;
+		}
+		.bubble2, .bubble4, .bubble5{
+			width: 120px;
+			height: 120px;
+			border-top: solid 1px fade(@bubble2, 80%);
+			border-right: solid 8px fade(@bubble2, 80%);
+			border-bottom: solid 8px fade(@bubble2, 80%);
+			border-left: solid 1px fade(@bubble2, 80%);
+			border-radius: 120px;
+			position: absolute;
+			background-color: fade(@headerColor, 80%);
+		}
+		.bubble3{
+			margin-left: 100px;
+		}
+		.bubble4{
+			margin-left: 5px;
+			margin-top: 20px;
+		}
+		.bubble5{
+			margin-top: 150px;
+			margin-left: 280px;
+		}
+		.pictureBubble{
+			padding: 5px;
+			width: 110px;
+			height: 110px;
+		}
+	}
+	form{
+		width: 90%;
+		margin: 10px;
+		.eingabe{
+			float: left;
+			margin-right: 45px;
+			width: 220px;
+			label{
+				display: block;
+			}
+			input, textarea{
+				font-family: 'Roboto', sans-serif;
+				margin-top: 10px;
+				width: 200px;
+				padding: 10px;
+				border-radius: 10px;
+				&:focus{
+					background-color: lighten(@headerColor, 70%);
+					border-radius: 10px;
+					border: solid 3px #0B610B;
+				}
+			}
+			#front, #rucken, #links, #rechts{
+				margin-bottom: 10px;
+				font-family: 'Roboto', sans-serif;
+				margin-top: 10px;
+				width: 200px;
+				padding: 10px;
+				border-radius: 10px;
+				&:focus{
+					background-color: lighten(@headerColor, 70%);
+					border-radius: 10px;
+					border: solid 3px #0B610B;
+				}
+			}
+			#geschlecht, #kastriert{
+				font-family: 'Roboto', sans-serif;
+				color: #1C1C1C;
+				margin-top: 10px;
+				padding: 10px;
+				border-radius: 10px;
+				&:focus{
+					background-color: lighten(@headerColor, 70%);
+					border-radius: 10px;
+					border: solid 3px #0B610B;
+				}
+			}
+		}
+	}
+	.hasenMenu{
+		.hasenMenuBild{
+			width: 80px;
+			height: 80px;
+		}
+		.hidden{
+			display: none;
+		}
+	}
+}

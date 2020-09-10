@@ -1,0 +1,53 @@
+<!Doctype.html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<header>
+<img src="header.jpg" class="headerP">
+<div class="colorRing"></div>
+<a href="Index.html"><img src="Logo_weiß.png" class="logo"></a>
+<div class="menu">
+		<div id="hamburg" onclick="hamburgClick()">
+    		<span class="line"></span>
+    		<span class="line"></span>
+        	<span class="line"></span>
+    	</div>
+    	<div id="selectMenu" class="hidden">
+    		<div class="menuPunkt"><a href="Index.html"><b>Home</b></a></div>
+    		<div class="menuPunkt"><a href="hasen.html"><b>Hasen</b></a></div>
+    		<div class="menuPunkt"><a href="neuerHase.html"><b>neuer Hase</b></a></div>
+    		<div class="menuPunkt"><a href="neuerWurf.html"><b>neuer Wurf</b></a></div>
+    	</div>
+</div>
+</header>
+<main>
+	<h1>neuer Wurf</h1>
+	<form>
+		<p class="eingabe">
+			<label for="geworfen">Geboren</label>
+			<input type="date" id="geworfen">
+		</p>
+		<p class="eingabe">
+			<label for="anzahl">Anzahl</label>
+			<input type="number" id="anzahl" placeholder="0">
+		</p>
+		<p class="eingabe">
+			<label for="mutter">Mutter</label>
+			<input type="Text" id="mutterWurf" placeholder="Mutter"><br>
+			<input type="Text" id="rasseMutter" placeholder="Rasse">
+		</p>
+		<p class="eingabe">
+			<label for="vater">Vater</label>
+			<input type="Text" id="vaterWurf" placeholder="Vater"><br>
+			<input type="Text" id="rasseVater" placeholder="Rasse">
+		</p>
+		<p class="eingabe">
+			<button id="neuerWurfKnopf">Knopf<button>
+		</p>
+	</form>
+</main>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
