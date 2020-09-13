@@ -15,44 +15,144 @@
         	<span class="line"></span>
     	</div>
     	<div id="selectMenu" class="hidden">
-    		<div class="menuPunkt"><a href="hasen.html"><b>Hasen</b></a></div>
-    		<div class="menuPunkt"><a href="neuerHase.html"><b>neuer Hase</b></a></div>
-    		<div class="menuPunkt"><a href="neuerWurf.html"><b>neuer Wurf</b></a></div>
+    		<div class="menuPunkt" data-page="landing"><b>Home</b></div>
+    		<div class="menuPunkt" data-page="browse"><b>Hasen</b></div>
+    		<div class="menuPunkt" data-page="newBunny"><b>neuer Hase</b></div>
+    		<div class="menuPunkt" data-page="newLitter"><b>neuer Wurf</b></div>
     	</div>
 </div>
 </header>
 <main>
-	<div class="info">
-		<div class="bubble1">
-			<h2 class="TextB1">Alle Daten an einem Ort und überall abrufbar.</h2>
+	<div class="contentPage" id="landing">
+		<div class="info">
+			<div class="bubble1">
+				<h2 class="TextB1">Alle Daten an einem Ort und überall abrufbar.</h2>
+			</div>
+			<div class="bubble2">
+			<img src="buch.png" class="pictureBubble">
+			</div>
 		</div>
-		<div class="bubble2">
-		<img src="buch.png" class="pictureBubble">
+		<div class="info">
+			<div class="bubble3">
+				<h2 class="TextB1">Krankheits-geschichte und Behandlungskosten erfassen.</h2>
+			</div>
+			<div class="bubble4">
+			<img src="krankheit.png" class="pictureBubble">
+			</div>
+		</div>
+		<div class="info">
+			<div class="bubble1">
+				<h2 class="TextB1">Gewicht und Gesundheit im Blick behalten.</h2>				
+			</div>
+			<div class="bubble5">
+				<img src="waage.png" class="pictureBubble">
+			</div>
+		</div>
+		<div class="info">
+			<div class="bubble3">
+				<h2 class="TextB1">Zucht und Stammbaum archivieren und verfolgen.</h2>
+			</div>
+			<div class="bubble4">
+			<img src="stammbaum.png" class="pictureBubble">
+			</div>
 		</div>
 	</div>
-	<div class="info">
-		<div class="bubble3">
-			<h2 class="TextB1">Krankheits-geschichte und Behandlungskosten erfassen.</h2>
-		</div>
-		<div class="bubble4">
-		<img src="krankheit.png" class="pictureBubble">
-		</div>
+	<div class="contentPage hidden" id="newBunny">
+		<h1>neuer Hase</h1>
+		<form>
+			<p class="eingabe">
+				<label for="name">Name</label>
+				<input type="text" id="name" placeholder="Name">
+			</p>
+			<p class="eingabe">
+				<label for="geboren">Geboren</label>
+				<input type="month" id="geboren">
+			</p>
+			<p class="eingabe">
+				<label for="geschlecht">Geschlecht</label>
+				<select id="geschlecht">
+					<option value="weiblich">weiblich</option>
+					<option value="mannlich">männlich</option>
+				</select>
+				<select id="kastriert">
+					<option value="kastriert">kastriert</option>
+					<option value="unkastriert">unkastriert</option>
+				</select>
+			</p>
+			<p class="eingabe">
+				<label for="rasse">Rasse</label>
+				<textarea id="rasse" placeholder="Rasse" cols="20" rows="2"></textarea>
+			</p>
+			<p class="eingabe">
+				<label for="farbe">Farbe<label>
+				<input type="Text" id="farbe" placeholder="Farbe">
+			</p>
+			<p class="eingabe">
+				<label for="besitz">Im Besitz seit:<label>
+				<input type="month" id="besitz">
+			</p>
+			<p class="eingabe">
+				<label for="mutter">Mutter</label>
+				<input type="Text" id="mutter" placeholder="Mutter"><br>
+				<input type="Text" id="mRasse" placeholder="Rasse">
+			</p>
+			<p class="eingabe">
+				<label for="vater">Vater</label>
+				<input type="Text" id="vater" placeholder="Vater"><br>
+				<input type="Text" id="vRasse" placeholder="Rasse">
+			</p>
+			<p class="eingabe">
+				<label for="front">Front</label>
+				<input type="file" id="front">
+				<label for="rucken">Rücken</label>
+				<input type="file" id="rucken">
+				<label for="links">Links</label>
+				<input type="file" id="links">
+				<label for="rechts">Rechts</label>
+				<input type="file" id="rechts">
+			</p>
+			<p class="eingabe">
+				<butto id="neuerHaseKnopf">knopf</button>
+			</p>
+		</form>
 	</div>
-	<div class="info">
-		<div class="bubble1">
-			<h2 class="TextB1">Gewicht und Gesundheit im Blick behalten.</h2>
-		</div>
-		<div class="bubble5">
-		<img src="waage.png" class="pictureBubble">
-		</div>
+	<div class="contentPage hidden" id="newLitter">
+		<h1>neuer Wurf</h1>
+		<form>
+			<p class="eingabe">
+				<label for="geworfen">Geboren</label>
+				<input type="date" id="geworfen">
+			</p>
+			<p class="eingabe">
+				<label for="anzahl">Anzahl</label>
+				<input type="number" id="anzahl" placeholder="0">
+			</p>
+			<p class="eingabe">
+				<label for="mutter">Mutter</label>
+				<input type="Text" id="mutterWurf" placeholder="Mutter"><br>
+				<input type="Text" id="rasseMutter" placeholder="Rasse">
+			</p>
+			<p class="eingabe">
+				<label for="vater">Vater</label>
+				<input type="Text" id="vaterWurf" placeholder="Vater"><br>
+				<input type="Text" id="rasseVater" placeholder="Rasse">
+			</p>
+			<p class="eingabe">
+				<button id="neuerWurfKnopf">Knopf<button>
+			</p>
+		</form>
 	</div>
-	<div class="info">
-		<div class="bubble3">
-			<h2 class="TextB1">Zucht und Stammbaum archivieren und verfolgen.</h2>
+	<div class="contentPage hidden" id="browse">
+		<div class="hasenMenu" onclick="hasenMenuClick()">
+			<img src="HasenMenu.png" class="hasenMenuBild">
 		</div>
-		<div class="bubble4">
-		<img src="stammbaum.png" class="pictureBubble">
+		<div id="hasenWahl" class="hidden">
+			<div class="hase"><a href="#dagmar"><p>Dagmar</p></a></div>
 		</div>
+	
+		<h1>Hasen</h1>
+	
+		<p id="nameHase">name</p>
 	</div>
 </main>
 <script type="text/javascript" src="script.js"></script>

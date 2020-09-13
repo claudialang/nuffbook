@@ -76,13 +76,13 @@ header .menu #selectMenu {
   top: 220px;
 }
 header .menu #selectMenu .menuPunkt {
+  cursor: pointer;
   z-index: 5;
   top: 220px;
   padding: 20px 20px 20px 20px;
   background: #0B610B;
   position: relative;
 }
-/* reusable class for things which are initially hidden */
 .hidden {
   display: none;
 }

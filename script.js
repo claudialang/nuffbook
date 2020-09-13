@@ -1,6 +1,7 @@
-var selectMenu = document.getElementById("selectMenu");
+
 	
 function hamburgClick(){
+	var selectMenu = document.getElementById("selectMenu");
 	if (selectMenu.classList.contains("hidden")) {
 		selectMenu.classList.remove("hidden");
 	} else {
@@ -83,7 +84,7 @@ var HasenListe = [
     },
     
 ];
-document.getElementById("nameHase").innerHTML = HasenListe[0].name;
+//document.getElementById("nameHase").innerHTML = HasenListe[0].name;
 
 var fertigWurf = document.getElementById("neuerWurfKnopf");
 if (fertigWurf) {
@@ -98,3 +99,32 @@ if (fertigWurf) {
 			console.log(anzahl, wurftag, mutterWurf, rasseMutterWurf, vaterWurf, rasseVaterWurf);
 	}
 }
+
+// page switcher
+
+function changeContentPage() {
+	pageSelected = this.dataset.page;
+	document.querySelectorAll("div.contentPage").forEach(function(page){
+		if (page === undefined) {
+			return 0;
+		}
+		if (page.id == pageSelected) {
+			if (page.classList.contains("hidden")) {
+				page.classList.remove("hidden");
+			}
+		} else {
+			if (!page.classList.contains('hidden')) {
+				page.classList.add('hidden');
+			}
+		}
+	});
+	hamburgClick();
+}
+
+//Wait for the html document to be loaded (but not for images)
+document.addEventListener("DOMContentLoaded", function(event) {
+	// Install the menu click handler
+	document.querySelectorAll("div.menuPunkt").forEach(function (link) {
+		link.addEventListener("click", changeContentPage);
+	});
+});
