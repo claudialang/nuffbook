@@ -8,16 +8,39 @@ function hamburgClick(){
 		selectMenu.classList.add("hidden");
 	}
 }
-
-var hasenWahl = document.getElementById("hasenWahl");
 	
 function hasenMenuClick(){
+	//finde Elternelement "HasenWahl"
+	var hasenWahl = document.getElementById("hasenWahl");
+	// Kindelement bereinigen
+	hasenWahl.innerHTML = "";
 	if (hasenWahl.classList.contains("hidden")) {
 		hasenWahl.classList.remove("hidden");
 	} else {
 		hasenWahl.classList.add("hidden");
 	}
-}
+	//für alle Hasen in HasenListe
+	for (let index = 0; index < HasenListe.length; index++) {
+		const Hase = HasenListe[index];
+		console.log(Hase.name);
+		// Erzeuge Kindelement
+		let eltDiv = document.createElement('div');
+		let eltA = document.createElement('a');
+		eltA.href = "#";
+		// Erzeuge Text von Kindelement
+		let eltText = document.createTextNode(Hase.name);
+		// Füge TextNode zum Div
+		eltA.appendChild(eltText);
+		eltDiv.appendChild(eltA);
+		// TODO: Erzeuge Attribute von Kindelement
+		eltDiv.classList.add("hase");	
+		
+		// Füge Div hinten an hasenWahl
+		hasenWahl.appendChild(eltDiv);
+	}
+}		
+		
+
 
 /**
  * Formular 
@@ -45,17 +68,19 @@ if (neuerHaseKnopf) {
 		console.log(neuerHase);
 	}
 }
+
+
 var HasenListe = [
     // Erster Hase.
     {
-    	alter: "2020-02",
+    	alter: "2016-04",
 		farbe: "braunweis",
 		fotoFront: "",
 		fotoLinks: "",
 		fotoRechts: "",
 		fotoRucken: "",
 		geschlecht: "weiblich",
-		imBesitz: "2020-07",
+		imBesitz: "2016-07",
 		kastriert: "unkastriert",
 		mutter: "nb",
 		mutterRasse: "Riesenschecke",
@@ -66,25 +91,37 @@ var HasenListe = [
     },
 	// Zweiter Hase
     {
-    	alter: "2020-03",
+		name: "Herr Mann",
 		farbe: "braun",
 		fotoFront: "",
 		fotoLinks: "",
 		fotoRechts: "",
 		fotoRucken: "",
 		geschlecht: "männlich",
-		imBesitz: "2020-05",
+		imBesitz: "2018-07",
+    	alter: "2018-04",
 		kastriert: "unkastriert",
 		mutter: "nb",
-		mutterRasse: "DeutscherWidder",
-		name: "Herr Mann",
-		rasse: "DeutscherWidder",
+		mutterRasse: "Deutscher Widder",
+		rasse: "Deutscher Widder",
 		vater: "nb",
-		vaterRasse: "DeutscherWidder",
+		vaterRasse: "Deutscher Widder",
     },
     
 ];
-//document.getElementById("nameHase").innerHTML = HasenListe[0].name;
+
+
+	
+
+
+//document.getElementById("menuHaseFirst").innerHTML = HasenListe[0].name;
+//document.getElementById("menuHaseSecond").innerHTML = HasenListe[1].name;
+//document.getElementById("nameHaseFirst").innerHTML = HasenListe[0].name;
+//document.getElementById("alterHaseFirst").innerHTML = "Geboren am: " + HasenListe[0].alter;
+
+
+
+
 
 var fertigWurf = document.getElementById("neuerWurfKnopf");
 if (fertigWurf) {
@@ -117,8 +154,49 @@ function changeContentPage() {
 				page.classList.add('hidden');
 			}
 		}
+		if (page.id == 'browse') {
+			buildPageHasenseite();
+		}
 	});
 	hamburgClick();
+}
+
+function buildPageHasenseite()
+{
+	hasenItemsListe = document.querySelector('.hasenDaten');
+	hasenItemsListe.innerHTML = '';
+	spalten = {
+		name: "Name",
+		farbe: "Farbe",
+		fotoFront: "Foto 1",
+		fotoLinks: "Foto 2",
+		fotoRechts: "Foto 3",
+		fotoRucken: "Foto 4",
+		geschlecht: "Geschlecht",
+		imBesitz: "Im Besitz Seit",
+    	alter: "Alter",
+		kastriert: "Kastriert",
+		mutter: "Mutter",
+		mutterRasse: "Rasse der Mutter",
+		rasse: "Rasse des Tiers",
+		vater: "Vater",
+		vaterRasse: "Rasse des Vaters",
+	}
+
+	for (hase of HasenListe) {
+		console.log(hase);
+		// Jeder Hase kommt in ein eigenes ul-Element
+		// In jedem ul-Element ist jedes Attribut eine Zeile
+		eigenschaftenListe = document.createElement('ul');
+		for (eigenschaft in hase) {
+			eigenschaftenEintrag = document.createElement('li');
+			eigentschaftenText = document.createTextNode(spalten[eigenschaft] + ': ' +  hase[eigenschaft]);
+			eigenschaftenEintrag.appendChild(eigentschaftenText);
+			eigenschaftenListe.appendChild(eigenschaftenEintrag);
+		}
+		hasenItemsListe.appendChild(eigenschaftenListe);
+	}
+
 }
 
 //Wait for the html document to be loaded (but not for images)
