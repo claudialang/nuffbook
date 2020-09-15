@@ -97,30 +97,41 @@ main .info {
   float: left;
   width: 420px;
   height: 320px;
-  margin-left: 20px;
   margin-top: 20px;
 }
 main .info .bubble1,
 main .info .bubble3 {
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   border-top: solid 10px #0174DF;
   border-right: solid 10px #0174DF;
   border-bottom: solid 1px #0174DF;
   border-left: solid 1px #0174DF;
-  border-radius: 300px;
+  border-radius: 280px;
   position: absolute;
   background-color: rgba(11, 59, 11, 0.8);
 }
 main .info .bubble1 .TextB1,
 main .info .bubble3 .TextB1 {
-  padding: 70px 40px 50px 40px;
+  padding: 50px 40px 50px 40px;
+  color: #BDBDBD;
+  text-align: center;
+}
+main .info .bubble1 .TextB2,
+main .info .bubble3 .TextB2 {
+  padding: 30px 40px 50px 50px;
+  color: #BDBDBD;
+  text-align: center;
+}
+main .info .bubble1 .TextB3,
+main .info .bubble3 .TextB3 {
+  padding: 60px 40px 50px 40px;
   color: #BDBDBD;
   text-align: center;
 }
 main .info .bubble2 {
   margin-top: 100px;
-  margin-left: 280px;
+  margin-left: 240px;
 }
 main .info .bubble2,
 main .info .bubble4,
@@ -136,7 +147,7 @@ main .info .bubble5 {
   background-color: rgba(11, 59, 11, 0.8);
 }
 main .info .bubble3 {
-  margin-left: 100px;
+  margin-left: 70px;
 }
 main .info .bubble4 {
   margin-left: 5px;
@@ -144,7 +155,7 @@ main .info .bubble4 {
 }
 main .info .bubble5 {
   margin-top: 150px;
-  margin-left: 280px;
+  margin-left: 240px;
 }
 main .info .pictureBubble {
   padding: 5px;
@@ -210,33 +221,80 @@ main form .eingabe #kastriert:focus {
   border-radius: 10px;
   border: solid 3px #0B610B;
 }
-main .fixedMenu {
+main form .eingabe #neuerHaseKnopf img,
+main form .eingabe #neuerWurfKnopf img {
+  width: 50px;
+  height: 50px;
+  border: solid 3px #0B610B;
+  border-radius: 33px;
+  padding: 12px;
+}
+main #browse .fixedMenu {
   position: fixed;
   left: 20px;
   top: 260px;
 }
-main .fixedMenu .hasenMenu .hasenMenuBild {
+main #browse .fixedMenu .hasenMenu .hasenMenuBild {
   width: 80px;
   height: 80px;
-  background-color: #0B3B0B;
+  background-color: #0B610B;
   border-radius: 40px;
 }
-main .fixedMenu .hasenMenu .hidden {
+main #browse .fixedMenu .hasenMenu .hidden {
   display: none;
 }
-main .fixedMenu #hasenWahl .hase {
-  background-color: #0B3B0B;
+main #browse .fixedMenu #hasenWahl .hase {
+  background-color: #0B610B;
   padding: 10px;
   margin-top: 10px;
   border-radius: 10px;
   font-size: 18px;
 }
-main .fixedMenu #hasenWahl a {
+main #browse .fixedMenu #hasenWahl a {
   text-decoration: none;
   color: #BDBDBD;
 }
 main #browse h1 {
-  padding-top: 80px;
+  margin-top: 150px;
+}
+main #browse .hasenDaten {
+  width: 320px;
+  height: 1460px;
+  border: solid 1px black;
+  border-radius: 20px;
+  background-color: #0B3B0B;
+  margin: auto;
+  padding: 15px;
+}
+main #browse .hasenDaten #anzeigeName,
+main #browse .hasenDaten #anzeigeBesitz {
+  float: left;
+  width: 290px;
+  height: 40px;
+}
+main #browse .hasenDaten #anzeigeName h3,
+main #browse .hasenDaten #anzeigeBesitz h3 {
+  margin-top: 0px;
+}
+main #browse .hasenDaten #anzeigeFarbe,
+main #browse .hasenDaten #anzeigeAlter,
+main #browse .hasenDaten #anzeigeGeschlecht,
+main #browse .hasenDaten #anzeigeKastriert,
+main #browse .hasenDaten #anzeigeNameMutter,
+main #browse .hasenDaten #anzeigeRasseMutter,
+main #browse .hasenDaten #anzeigeNameVater,
+main #browse .hasenDaten #anzeigeRasseVater {
+  width: 150px;
+  height: 40px;
+  float: left;
+}
+main #browse .hasenDaten #anzeigeFotoFront,
+main #browse .hasenDaten #anzeigeFotoLinks,
+main #browse .hasenDaten #anzeigeFotoRechts,
+main #browse .hasenDaten #anzeigeFotoRucken {
+  float: left;
+  width: 300px;
+  height: 300px;
 }
 
 /*# sourceMappingURL=styles.css.map */
