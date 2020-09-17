@@ -7,7 +7,7 @@
 <header>
 <img src="BildHeader.png" class="headerP">
 <div class="colorRing"></div>
-<a href="Index.html"><img src="Logo_schwarz.png" class="logo"></a>
+<img src="Logo_weiß.png" class="logo">
 <div class="menu">
 		<div id="hamburg" onclick="hamburgClick()">
     		<span class="line"></span>
@@ -18,7 +18,8 @@
     		<div class="menuPunkt" data-page="landing"><b>Home</b></div>
     		<div class="menuPunkt" data-page="browse"><b>Hasen</b></div>
     		<div class="menuPunkt" data-page="newBunny"><b>neuer Hase</b></div>
-    		<div class="menuPunkt" data-page="newLitter"><b>neuer Wurf</b></div>
+			<div class="menuPunkt" data-page="newLitter"><b>neuer Wurf</b></div>
+			<div class="menuPunkt" data-page="litter"><b>Wurf</b></div>
     	</div>
 </div>
 </header>
@@ -120,6 +121,10 @@
 		<h1>neuer Wurf</h1>
 		<form>
 			<p class="eingabe">
+				<label for="bezeichnung">Bezeichnung</label>
+				<input type="text" id="bezeichnung" placeholder="JahrA">
+			</p>
+			<p class="eingabe">
 				<label for="geworfen">Geboren</label>
 				<input type="date" id="geworfen">
 			</p>
@@ -138,7 +143,7 @@
 				<input type="Text" id="rasseVater" placeholder="Rasse">
 			</p>
 			<p class="eingabe">
-				<button id="neuerWurfKnopf"><img src="hakchen.png"><button>
+				<butto id="neuerWurfKnopf"><img src="hakchen.png"><butto>
 			</p>
 		</form>
 	</div>
@@ -151,21 +156,12 @@
 		</div>
 		</div> 
 		<h1>meine Hasen</h1>
-		<div id="ersterHase" class="hasenDaten">
-			<div id="anzeigeName"><h3>name</h3></div>
-			<div id="anzeigeFarbe">farbe</div>
-			<div id="anzeigeAlter">alter</div>
-			<div id="anzeigeBesitz">besitz</div>
-			<div id="anzeigeGeschlecht">geschlecht</div>
-			<div id="anzeigeKastriert">kastriert</div>
-			<div id="anzeigeNameMutter">nameM</div>
-			<div id="anzeigeRasseMutter">rasseM</div>
-			<div id="anzeigeNameVater">nameV</div>
-			<div id="anzeigeRasseVater">rasseV</div>
-			<div id="anzeigeFotoFront">foto front</div>
-			<div id="anzeigeFotoLinks">foto links</div>
-			<div id="anzeigeFotoRechts">foto rechts</div>
-			<div id="anzeigeFotoRucken">foto rucken</div>
+		<div id="hasencontainer">
+		</div>
+	</div>
+	<div class="contentPage hidden" id="litter">
+		<h1>unsere Babys</h1>
+		<div id="wurfcontainer">
 		</div>
 	</div>
 </main>

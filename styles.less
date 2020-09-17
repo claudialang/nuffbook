@@ -4,285 +4,354 @@
 @bubble2: #F7E516;
 @TextColor: #BDBDBD;
 
-body {
-	font-size: 18px;
-	font-family: 'Roboto', sans-serif;
-	color: @TextColor;
-	background-color: @backgroundColor;
-	margin:0;
-	
-	}
-header {
-	height: 200px;
-	background-color: @headerColor;
-	z-index: -5;
-	.headerP {
-		width: 284px;
-		height: 200px;
-		position: absolute;
-		border-radius: 0px 0px 0px 0px;
-		}
-	.colorRing {
-		position: absolute;
-		border-top: none;
-		border-left: none;
-		border-right: solid 30px @bubble2;
-		border-bottom: solid 3px @bubble2;
-		height: 199px;
-		width: 345px;
-		border-radius: 0px 0px 372px 0px;
-		}
-	a {
-		text-decoration: none;
+	body {
+		font-size: 18px;
+		font-family: 'Roboto', sans-serif;
 		color: @TextColor;
+		background-color: @backgroundColor;
+		margin:0;
+		
+		}
+	header {
+		height: 200px;
+		background-color: @headerColor;
+		z-index: -5;
+		.headerP {
+			display: none;
+			}
+		.colorRing {
+			display: none;
+			}
 		.logo {
-			width: 200px;
-			position: absolute;
-			right: 30px;
-			top: 20px;
-			}
-		}
-
-	.menu {
-		z-index: 2;
-		#hamburg { 
-			top: 205px;
+			position: relative;
 			display: block;
-			background: #0B610B; width: 75px; height: 50px; 
-			position: relative; 
-			margin-left: auto; margin-right: auto;
-			border-radius: 4px; 
-			transition: border-radius .5s;
+			margin: auto;
+			padding-top: 35px;
 			}
-		.line { 
-			position: absolute; 
-			left:10px;
-			height: 4px; width: 55px; 
-			background: #000; border-radius: 2px;
-			display: block; 
-			transition: 0.5s; 
-			transform-origin: center; 
+			
+
+		.menu {
+			z-index: 2;
+			#hamburg { 
+				top: 70px;
+				display: block;
+				background: #0B610B; width: 75px; height: 50px; 
+				position: relative; 
+				margin-left: auto; margin-right: auto;
+				border-radius: 4px; 
+				transition: border-radius .5s;
+				}
+			.line { 
+				position: absolute; 
+				left:10px;
+				height: 4px; width: 55px; 
+				background: #000; border-radius: 2px;
+				display: block; 
+				transition: 0.5s; 
+				transform-origin: center; 
+				}
+			.line:nth-child(1) { top: 12px; 
 			}
-		.line:nth-child(1) { top: 12px; 
-		}
-		.line:nth-child(2) { top: 24px; 
-		}
-		.line:nth-child(3) { top: 36px; 
-		}
-		#selectMenu{
-			z-index: 5;
-			top: 220px;
-			.menuPunkt {
-				cursor: pointer;
+			.line:nth-child(2) { top: 24px; 
+			}
+			.line:nth-child(3) { top: 36px; 
+			}
+			#selectMenu{
 				z-index: 5;
 				top: 220px;
-				padding: 20px 20px 20px 20px;
-				background: #0B610B;
-				position: relative;
-			}
-		}	
+				.menuPunkt {
+					cursor: pointer;
+					z-index: 5;
+					top: 220px;
+					padding: 20px 20px 20px 20px;
+					background: #0B610B;
+					position: relative;
+				}
+			}	
 
-	}
-}
-.hidden{
-	display: none;
-}
-main {
-	padding-left: 20px;
-	margin-top: 70px;
-	h1{
-		padding-left: 10px;
-	}
-	.info{
-		float: left;
-		width: 420px;
-		height: 320px;
-		margin-top: 20px;
-		.bubble1, .bubble3{
-			width: 280px;
-			height: 280px;
-			border-top: solid 10px @bubble1;
-			border-right: solid 10px @bubble1;
-			border-bottom: solid 1px @bubble1;
-			border-left: solid 1px @bubble1;
-			border-radius: 280px;
-			position: absolute;
-			background-color: fade(@headerColor, 80%);
-			.TextB1{
-				padding: 50px 40px 50px 40px;
-				color: @TextColor;
-				text-align: center;
-			}
-			.TextB2{
-				padding: 30px 40px 50px 50px;
-				color: @TextColor;
-				text-align: center;
-			}
-			.TextB3{
-				padding: 60px 40px 50px 40px;
-				color: @TextColor;
-				text-align: center;
-			}
-		}
-		.bubble2{
-			margin-top: 100px;
-			margin-left: 240px;
-		}
-		.bubble2, .bubble4, .bubble5{
-			width: 120px;
-			height: 120px;
-			border-top: solid 1px fade(@bubble2, 80%);
-			border-right: solid 8px fade(@bubble2, 80%);
-			border-bottom: solid 8px fade(@bubble2, 80%);
-			border-left: solid 1px fade(@bubble2, 80%);
-			border-radius: 120px;
-			position: absolute;
-			background-color: fade(@headerColor, 80%);
-		}
-		.bubble3{
-			margin-left: 70px;
-		}
-		.bubble4{
-			margin-left: 5px;
-			margin-top: 20px;
-		}
-		.bubble5{
-			margin-top: 150px;
-			margin-left: 240px;
-		}
-		.pictureBubble{
-			padding: 5px;
-			width: 110px;
-			height: 110px;
 		}
 	}
-	form{
-		width: 90%;
-		margin: 10px;
-		.eingabe{
-			float: left;
-			margin-right: 45px;
-			width: 220px;
-			label{
-				display: block;
-			}
-			input, textarea{
-				font-family: 'Roboto', sans-serif;
-				margin-top: 10px;
-				width: 200px;
-				padding: 10px;
-				border-radius: 10px;
-				&:focus{
-					background-color: lighten(@headerColor, 70%);
-					border-radius: 10px;
-					border: solid 3px #0B610B;
-				}
-			}
-			#front, #rucken, #links, #rechts{
-				margin-bottom: 10px;
-				font-family: 'Roboto', sans-serif;
-				margin-top: 10px;
-				width: 200px;
-				padding: 10px;
-				border-radius: 10px;
-				&:focus{
-					background-color: lighten(@headerColor, 70%);
-					border-radius: 10px;
-					border: solid 3px #0B610B;
-				}
-			}
-			#geschlecht, #kastriert{
-				font-family: 'Roboto', sans-serif;
-				color: #1C1C1C;
-				margin-top: 10px;
-				padding: 10px;
-				border-radius: 10px;
-				&:focus{
-					background-color: lighten(@headerColor, 70%);
-					border-radius: 10px;
-					border: solid 3px #0B610B;
-				}
-			}
-			#neuerHaseKnopf, #neuerWurfKnopf{
-				img{
-					width: 50px;
-					height: 50px;
-					border: solid 3px #0B610B;
-					border-radius: 33px;
-					padding: 12px;
-				}
-			}
-		}
+	.hidden{
+		display: none;
 	}
-	#browse {
-		.fixedMenu {
-			position: fixed;
-			left: 20px;
-			top: 260px;
-			.hasenMenu{
-				.hasenMenuBild{
-					width: 80px;
-					height: 80px;
-					background-color: #0B610B;
-					border-radius: 40px;
-				}
-				.hidden{
-					display: none;
-				}
+	main {
+		padding-left: 20px;
+		margin-top: 70px;
+		#landing{
+			h1{
+				padding-left: 10px;
 			}
-			#hasenWahl{
-				.hase {
-				background-color: #0B610B;
-				padding: 10px;
-				margin-top: 10px;
-				border-radius: 10px;
-				font-size: 18px;	
-				}
-				a {
-				text-decoration: none;
-				color: @TextColor;
-				}
-			}
-		}
-		h1{
-			margin-top: 150px;
-		}
-		.hasenDaten{
-			width: 320px;
-			height: 1460px;
-			border: solid 1px black;
-			border-radius: 20px;
-			background-color: @headerColor;
-			margin: auto;
-			padding: 15px;
-			#anzeigeName, #anzeigeBesitz{
+			.info{
 				float: left;
-				width: 290px;
-				height: 40px;
-				h3{
-				margin-top: 0px;
-				}
-			}
-			#anzeigeFarbe, 
-			#anzeigeAlter, 
-			#anzeigeGeschlecht, 
-			#anzeigeKastriert, 
-			#anzeigeNameMutter, 
-			#anzeigeRasseMutter, 
-			#anzeigeNameVater, 
-			#anzeigeRasseVater{
-				width: 150px;
-				height: 40px;
-				float: left;
-			}
-			#anzeigeFotoFront, 
-			#anzeigeFotoLinks, 
-			#anzeigeFotoRechts, 
-			#anzeigeFotoRucken{
-				float: left;
-				width: 300px;
+				width: 370px;
 				height: 300px;
+				margin-top: 5px;
+				.bubble1, .bubble3{
+					width: 280px;
+					height: 280px;
+					border-top: solid 10px @bubble1;
+					border-right: solid 10px @bubble1;
+					border-bottom: solid 1px @bubble1;
+					border-left: solid 1px @bubble1;
+					border-radius: 280px;
+					position: absolute;
+					background-color: fade(@headerColor, 80%);
+					.TextB1{
+						padding: 50px 40px 50px 40px;
+						color: @TextColor;
+						text-align: center;
+					}
+					.TextB2{
+						padding: 30px 40px 50px 50px;
+						color: @TextColor;
+						text-align: center;
+					}
+					.TextB3{
+						padding: 60px 40px 50px 40px;
+						color: @TextColor;
+						text-align: center;
+					}
+				}
+				.bubble2{
+					margin-top: 100px;
+					margin-left: 240px;
+				}
+				.bubble2, .bubble4, .bubble5{
+					width: 120px;
+					height: 120px;
+					border-top: solid 1px fade(@bubble2, 80%);
+					border-right: solid 8px fade(@bubble2, 80%);
+					border-bottom: solid 8px fade(@bubble2, 80%);
+					border-left: solid 1px fade(@bubble2, 80%);
+					border-radius: 120px;
+					position: absolute;
+					background-color: fade(@headerColor, 80%);
+				}
+				.bubble3{
+					margin-left: 70px;
+				}
+				.bubble4{
+					margin-left: 5px;
+					margin-top: 20px;
+				}
+				.bubble5{
+					margin-top: 150px;
+					margin-left: 240px;
+				}
+				.pictureBubble{
+					padding: 5px;
+					width: 110px;
+					height: 110px;
+				}
+		}	}	
+		form{
+			width: 90%;
+			margin: 10px;
+			.eingabe{
+				float: left;
+				margin-right: 45px;
+				width: 220px;
+				label{
+					display: block;
+				}
+				input, textarea{
+					font-family: 'Roboto', sans-serif;
+					margin-top: 10px;
+					width: 200px;
+					padding: 10px;
+					border-radius: 10px;
+					&:focus{
+						background-color: lighten(@headerColor, 70%);
+						border-radius: 10px;
+						border: solid 3px #0B610B;
+					}
+				}
+				#front, #rucken, #links, #rechts{
+					margin-bottom: 10px;
+					font-family: 'Roboto', sans-serif;
+					margin-top: 10px;
+					width: 200px;
+					padding: 10px;
+					border-radius: 10px;
+					&:focus{
+						background-color: lighten(@headerColor, 70%);
+						border-radius: 10px;
+						border: solid 3px #0B610B;
+					}
+				}
+				#geschlecht, #kastriert{
+					font-family: 'Roboto', sans-serif;
+					color: #1C1C1C;
+					margin-top: 10px;
+					padding: 10px;
+					border-radius: 10px;
+					&:focus{
+						background-color: lighten(@headerColor, 70%);
+						border-radius: 10px;
+						border: solid 3px #0B610B;
+					}
+				}
+				#anzahl{
+					width: 80px;
+				}
+				#neuerHaseKnopf, #neuerWurfKnopf{
+					img{
+						width: 50px;
+						height: 50px;
+						border: solid 3px #0B610B;
+						border-radius: 33px;
+						padding: 12px;
+					}
+				}
+			}
+		}
+		#browse {
+			.fixedMenu {
+				position: fixed;
+				left: 20px;
+				top: 260px;
+				.hasenMenu{
+					.hasenMenuBild{
+						width: 80px;
+						height: 80px;
+						background-color: #0B610B;
+						border-radius: 40px;
+					}
+					.hidden{
+						display: none;
+					}
+				}
+				#hasenWahl{
+					.hase {
+					background-color: #0B610B;
+					padding: 10px;
+					margin-top: 10px;
+					border-radius: 10px;
+					font-size: 18px;	
+					}
+					a {
+					text-decoration: none;
+					color: @TextColor;
+					}
+				}
+			}
+			h1{
+				margin-top: 150px;
+			}
+			.hasenDaten{
+				width: 320px;
+				height: 1600px;
+				border: solid 1px black;
+				border-radius: 20px;
+				background-color: @headerColor;
+				margin: auto;
+				padding: 15px;
+				.attrname{
+					margin: 10px 0 10px 0;
+					font-size: 25px;
+					font-weight: bold;
+				}
+				.attrname, 
+				.attrimBesitz,  
+				.attrrasse{
+					float: left;
+					width: 290px;
+					height: 40px;
+				}
+				.attrfarbe,
+				.attralter, 
+				.attrgeschlecht, 
+				.attrkastriert{
+					width: 150px;
+					height: 40px;
+					float: left;
+				} 
+				.attrmutter, 
+				.attrmutterRasse, 
+				.attrvater, 
+				.attrvaterRasse{
+					width: 150px;
+					height: 60px;
+					float: left;
+				}
+				.attrfotoFront, 
+				.attrfotoLinks, 
+				.attrfotoRechts, 
+				.attrfotoRucken{
+					float: left;
+					width: 300px;
+					height: 300px;
+					margin: 5px 10px 5px 10px;
+					border: solid 1px black;
+				}
+			}
+		}
+		#litter{
+			.wurfDaten{
+				width: 320px;
+				height: 250px;
+				border: solid 1px black;
+				border-radius: 20px;
+				background-color: @headerColor;
+				margin: auto;
+				padding: 15px;
+				.attrWurfbezeichnung{
+					margin: 10px 0 10px 0;
+					font-size: 25px;
+					font-weight: bold;
+				}
+				.attrWurfwurftag,
+				.attrWurfanzahl{
+					float: left;
+					width: 290px;
+					height: 40px;
+				}
+				.attrWurfmutterWurf,
+				.attrWurfvaterWurf{
+					float: left;
+					width: 290px;
+					height: 25px;
+				}
+				.attrWurfrasseMutterWurf,
+				.attrWurfrasseVaterWurf{
+					float: left;
+					width: 290px;
+					padding-left: 60px;
+					height: 25px;
+				}
 			}
 		}
 	}
-}
+	@media only screen and (min-width: 600px ) {
+		header{
+			.headerP {
+				display: inline;
+				position: absolute;
+				border-radius: 0px 0px 0px 0px;
+				}
+			.colorRing {
+				display: inline;
+				position: absolute;
+				border-top: none;
+				border-left: none;
+				border-right: solid 30px @bubble2;
+				border-bottom: solid 3px @bubble2;
+				height: 199px;
+				width: 345px;
+				border-radius: 0px 0px 372px 0px;
+			}
+			.logo {
+				width: 200px;
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				padding: 0;
+			}
+			.menu{
+				#hamburg{
+					top: 210px;
+				}
+			}
+		}
+	}
+
